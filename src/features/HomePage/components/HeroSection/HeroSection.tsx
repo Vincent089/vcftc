@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './HeroSection.module.css';
+import Button from "../../../../components/common/Button/Button.tsx";
 
 const HeroSection: React.FC = () => {
     return (
@@ -12,9 +13,9 @@ const HeroSection: React.FC = () => {
                     I'm Vincent Corriveau, a freelance software engineer specializing in
                     financial process automation and custom-built applications that drive efficiency and innovation.
                 </p>
-                <a href="#contact" className={styles.ctaButton}>
+                <Button href="#contact" variant="accent">
                     Discuss Your Project
-                </a>
+                </Button>
             </div>
         </section>
     );

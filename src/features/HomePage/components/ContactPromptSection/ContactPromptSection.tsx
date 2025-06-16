@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from '../../../../components/common/Section/Section';
 import styles from './ContactPromptSection.module.css';
+import Button from "../../../../components/common/Button/Button.tsx";
 
 // It's good practice to put configurable items like email in a constant or env variable
 const YOUR_CONSULTING_EMAIL = "vincent.corriveau89@gmail.com";
@@ -16,12 +17,12 @@ const ContactPromptSection: React.FC = () => {
                     I am eager to partner with you to streamline your operations and drive efficiency through custom FinTech solutions.
                     Please reach out to schedule a discovery call to discuss your specific needs and how I can best support your business goals.
                 </p>
-                <a
+                <Button
                     href={`mailto:${YOUR_CONSULTING_EMAIL}?subject=Discovery Call Request - FinTech Consulting`}
-                    className={styles.ctaButton}
+                    variant="accentLarge"
                 >
                     Schedule a Discovery Call
-                </a>
+                </Button>
             </div>
         </Section>
     );
