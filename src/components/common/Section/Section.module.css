@@ -1,0 +1,17 @@
+.section {
+    padding: var(--space-xxl) 0; /* Default vertical padding */
+}
+
+.section:nth-child(even) { /* Optional: alternate background for sections */
+    /* background-color: var(--color-background-medium); */
+}
+
+.sectionInner {
+    /* Container class is applied by parent, this is for specific inner styling if needed */
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: var(--space-xl) 0;
+    }
+}

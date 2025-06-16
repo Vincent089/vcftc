@@ -1,0 +1,41 @@
+.logoLink {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: var(--space-xs);
+    transition: var(--transition-fast);
+}
+
+.logoLink:hover {
+    opacity: 0.85;
+    text-decoration: none;
+}
+
+.logoImage {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+}
+
+.logoText {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.logoTextSmall {
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-secondary);
+    display: block;
+    margin-top: var(--space-xxs);
+}
+
+@media (max-width: 768px) {
+    .logoImage {
+        height: 32px;
+    }
+    .logoText {
+        font-size: 1.1rem;
+    }
+}

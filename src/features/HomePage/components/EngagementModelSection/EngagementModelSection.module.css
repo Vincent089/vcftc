@@ -1,0 +1,136 @@
+.engagementSection {
+    background-color: var(--color-surface); /* Or var(--color-background-light) */
+    padding-top: var(--space-xxxl);
+    padding-bottom: var(--space-xxxl);
+    border-top: 1px solid var(--color-border);
+}
+
+.sectionTitle {
+    font-size: var(--font-size-h2);
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: var(--space-sm);
+    position: relative;
+    padding-bottom: var(--space-sm);
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-accent);
+}
+
+.introText {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 800px;
+    margin: 0 auto var(--space-xxl);
+    line-height: 1.7;
+}
+
+.modelsGrid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: var(--space-xxl);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* For larger screens, you might consider a 2 or 3 column layout if content is concise enough
+@media (min-width: 992px) {
+    .modelsGrid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+*/
+
+.modelCard {
+    background-color: var(--color-surface);
+    padding: var(--space-xl);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border); /* Subtle border for definition */
+}
+
+.modelCard:nth-child(even) {
+    background-color: var(--color-background-medium); /* Alternate background for visual separation */
+}
+
+
+.modelTitle {
+    font-size: 1.5rem; /* ~24px */
+    color: var(--color-secondary);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.modelIcon { /* Placeholder for icons if you add them */
+    font-size: 1.8rem;
+    color: var(--color-accent);
+}
+
+.modelDescription {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+}
+
+.modelSubtitle {
+    font-size: 1.125rem;
+    color: var(--color-primary);
+    font-weight: var(--font-weight-medium);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+}
+
+.modelList {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+    margin-bottom: var(--space-md);
+}
+
+.modelList li {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+    padding-left: var(--space-lg);
+    position: relative;
+}
+
+.modelList li::before {
+    content: '✓'; /* Or any other checkmark/bullet character */
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 768px) {
+    .engagementSection {
+        padding-top: var(--space-xxl);
+        padding-bottom: var(--space-xxl);
+    }
+    .sectionTitle {
+        font-size: 1.75rem;
+    }
+    .introText {
+        font-size: 1rem;
+        margin-bottom: var(--space-xl);
+    }
+    .modelCard {
+        padding: var(--space-lg);
+    }
+    .modelTitle {
+        font-size: 1.375rem;
+    }
+}

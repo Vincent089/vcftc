@@ -1,0 +1,91 @@
+.header {
+    background-color: var(--color-surface);
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.headerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.navLink {
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-xs) 0;
+    position: relative;
+    text-decoration: none;
+}
+
+.navLink:hover,
+.navLinkActive { /* For react-router-dom NavLink */
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: var(--transition-normal);
+}
+
+.navLink:hover::after,
+.navLinkActive::after {
+    width: 100%;
+}
+
+.mobileMenuButton {
+    display: none; /* Hidden on larger screens */
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1.75rem;
+    cursor: pointer;
+    padding: var(--space-xs);
+}
+
+@media (max-width: 768px) {
+    .nav {
+        /* Basic mobile menu - more complex logic needed for full functionality */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        right: 0;
+        background-color: var(--color-surface);
+        padding: var(--space-md);
+        box-shadow: var(--shadow-md);
+        border-top: 1px solid var(--color-border);
+    }
+
+    .navOpen {
+        display: flex;
+    }
+
+    .navLink {
+        padding: var(--space-sm) 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .mobileMenuButton {
+        display: block;
+    }
+}

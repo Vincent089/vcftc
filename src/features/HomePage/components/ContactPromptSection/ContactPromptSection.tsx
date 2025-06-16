@@ -1,0 +1,30 @@
+import React from 'react';
+import Section from '../../../../components/common/Section/Section';
+import styles from './ContactPromptSection.module.css';
+
+// It's good practice to put configurable items like email in a constant or env variable
+const YOUR_CONSULTING_EMAIL = "vincent.corriveau89@gmail.com";
+
+const ContactPromptSection: React.FC = () => {
+    return (
+        <Section id="contact" className={styles.contactSection} aria-labelledby="contact-title">
+            <div className={styles.contentWrapper}> {/* No need for global .container here as section handles it */}
+                <h2 id="contact-title" className={styles.sectionTitle}>
+                    Ready to Transform Your Operations?
+                </h2>
+                <p className={styles.promptText}>
+                    I am eager to partner with you to streamline your operations and drive efficiency through custom FinTech solutions.
+                    Please reach out to schedule a discovery call to discuss your specific needs and how I can best support your business goals.
+                </p>
+                <a
+                    href={`mailto:${YOUR_CONSULTING_EMAIL}?subject=Discovery Call Request - FinTech Consulting`}
+                    className={styles.ctaButton}
+                >
+                    Schedule a Discovery Call
+                </a>
+            </div>
+        </Section>
+    );
+};
+
+export default ContactPromptSection;

@@ -1,0 +1,66 @@
+.contactSection {
+    background-color: var(--color-secondary); /* Using a vibrant color for CTA */
+    color: var(--color-text-on-secondary);
+    padding-top: var(--space-xxxl);
+    padding-bottom: var(--space-xxxl);
+    text-align: center;
+}
+
+.contentWrapper {
+    max-width: 750px; /* Keep content focused */
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: var(--font-size-h2);
+    color: var(--color-text-on-secondary); /* Ensure contrast with background */
+    margin-bottom: var(--space-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+.promptText {
+    font-size: 1.25rem; /* ~20px */
+    line-height: 1.7;
+    margin-bottom: var(--space-xl);
+    opacity: 0.95; /* Slight transparency for softer look on colored background */
+}
+
+.ctaButton {
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+    padding: var(--space-md) var(--space-xxl); /* Make it a bit larger */
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    display: inline-block;
+    box-shadow: var(--shadow-lg); /* More prominent shadow */
+}
+
+.ctaButton:hover {
+    background-color: var(--color-accent-dark);
+    transform: translateY(-3px) scale(1.02); /* Slightly more pronounced hover effect */
+    box-shadow: 0 15px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: var(--color-text-on-accent);
+}
+
+@media (max-width: 768px) {
+    .contactSection {
+        padding-top: var(--space-xxl);
+        padding-bottom: var(--space-xxl);
+    }
+    .sectionTitle {
+        font-size: 1.75rem;
+    }
+    .promptText {
+        font-size: 1.125rem;
+    }
+    .ctaButton {
+        padding: var(--space-md) var(--space-xl);
+        font-size: 1.125rem;
+    }
+}

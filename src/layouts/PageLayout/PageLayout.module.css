@@ -1,0 +1,9 @@
+.pageLayout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer is at bottom even with little content */
+}
+
+.content {
+    flex-grow: 1; /* Allows content to take up available space */
+}

@@ -1,0 +1,71 @@
+.heroSection {
+    background-color: var(--color-primary);
+    color: var(--color-text-on-primary);
+    padding: var(--space-xxxl) 0;
+    text-align: center;
+    min-height: 70vh; /* Ensure it takes up a good portion of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroContent {
+    max-width: 800px;
+}
+
+.headline {
+    font-size: 3rem; /* Large and impactful */
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-md);
+    line-height: 1.2;
+}
+
+.subHeadline {
+    font-size: 1.375rem; /* ~22px */
+    font-weight: var(--font-weight-light);
+    margin-bottom: var(--space-xl);
+    opacity: 0.9;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaButton {
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+    padding: var(--space-md) var(--space-xl);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    display: inline-block;
+    box-shadow: var(--shadow-md);
+}
+
+.ctaButton:hover {
+    background-color: var(--color-accent-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    text-decoration: none;
+    color: var(--color-text-on-accent);
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding: var(--space-xxl) 0;
+        min-height: 60vh;
+    }
+    .headline {
+        font-size: 2.25rem; /* ~36px */
+    }
+    .subHeadline {
+        font-size: 1.125rem; /* ~18px */
+    }
+    .ctaButton {
+        padding: var(--space-sm) var(--space-lg);
+        font-size: 1rem;
+    }
+}

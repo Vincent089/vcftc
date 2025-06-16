@@ -1,0 +1,84 @@
+.aboutSection {
+    background-color: var(--color-surface); /* Or var(--color-background-medium) for subtle contrast */
+    padding-top: var(--space-xxxl);
+    padding-bottom: var(--space-xxxl);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.contentWrapper {
+    max-width: 900px; /* Control content width for readability */
+    margin: 0 auto;
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+/* Consider a two-column layout if you add a professional photo or a graphic later */
+/* @media (min-width: 768px) {
+  .contentWrapper {
+    grid-template-columns: 1fr 2fr; // Example: image on left, text on right
+  }
+} */
+
+.sectionTitle {
+    font-size: var(--font-size-h2); /* Using h2 size from theme.css */
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+    text-align: center; /* Or left-align if you prefer */
+    position: relative;
+    padding-bottom: var(--space-sm);
+}
+
+/* Optional: Add a subtle underline accent to the title */
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-accent);
+}
+
+.textContainer p {
+    font-size: 1.125rem; /* ~18px for better readability */
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.textContainer p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight {
+    color: var(--color-secondary);
+    font-weight: var(--font-weight-semibold);
+}
+
+.expertisePill {
+    display: inline-block;
+    background-color: var(--color-primary-light);
+    color: var(--color-text-on-primary);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--border-radius-lg);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
+    margin-right: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+    .aboutSection {
+        padding-top: var(--space-xxl);
+        padding-bottom: var(--space-xxl);
+    }
+    .sectionTitle {
+        font-size: 1.75rem; /* Adjust for mobile */
+    }
+    .textContainer p {
+        font-size: 1rem;
+    }
+}
