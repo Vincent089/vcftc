@@ -12,21 +12,21 @@
 }
 
 .logoImage {
-    height: 40px; /* Adjust as needed */
+    height: 40px;
     width: auto;
 }
 
 .logoText {
     font-size: 1.25rem;
     font-weight: var(--font-weight-bold);
-    color: var(--color-primary);
+    color: var(--color-text-primary); /* Light primary text */
     line-height: 1;
 }
 
 .logoTextSmall {
     font-size: 0.8rem;
     font-weight: var(--font-weight-regular);
-    color: var(--color-text-secondary);
+    color: var(--color-text-secondary); /* Light secondary text */
     display: block;
     margin-top: var(--space-xxs);
 }

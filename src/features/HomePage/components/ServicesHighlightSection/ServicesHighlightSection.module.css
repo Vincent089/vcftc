@@ -1,14 +1,14 @@
 .servicesSection {
-    background-color: var(--color-background-medium); /* Subtle contrast from other sections */
+    background-color: var(--color-primary-dark); /* Main dark background */
     padding-top: var(--space-xxxl);
     padding-bottom: var(--space-xxxl);
 }
 
 .sectionTitle {
     font-size: var(--font-size-h2);
-    color: var(--color-primary);
+    color: var(--color-text-primary);
     text-align: center;
-    margin-bottom: var(--space-sm); /* Reduced bottom margin as intro text follows */
+    margin-bottom: var(--space-sm);
     position: relative;
     padding-bottom: var(--space-sm);
 }
@@ -19,64 +19,82 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 70px;
     height: 3px;
-    background-color: var(--color-accent);
+    background-color: var(--color-tertiary-accent); /* Gold accent */
 }
 
 .introText {
     text-align: center;
-    font-size: 1.125rem;
+    font-size: 1.25rem; /* Slightly larger intro */
     color: var(--color-text-secondary);
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto var(--space-xxl);
     line-height: 1.7;
 }
 
 .servicesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly wider minmax */
     gap: var(--space-xl);
 }
 
 .serviceCard {
-    background-color: var(--color-surface);
-    padding: var(--space-lg);
+    background-color: var(--color-surface); /* Dark surface for cards */
+    padding: var(--space-xl); /* More padding */
     border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-md);
+    /* box-shadow: var(--shadow-md); */ /* Shadow might be less effective, use border/glow */
+    border: 1px solid var(--color-border-dark-theme);
     transition: var(--transition-normal);
     display: flex;
-    flex-direction: column; /* Ensure content within card flows vertically */
+    flex-direction: column;
+    position: relative; /* For decorative lines */
 }
 
 .serviceCard:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
+    border-color: var(--color-secondary-accent); /* Teal border on hover */
+    box-shadow: 0 0 25px rgba(var(--color-secondary-accent-rgb, 0, 166, 166), 0.2); /* Teal glow */
 }
 
 .serviceIcon {
-    font-size: 2.5rem; /* Placeholder for actual icons */
-    color: var(--color-secondary);
+    font-size: 2.75rem;
+    color: var(--color-secondary-accent); /* Teal icons */
     margin-bottom: var(--space-md);
-    /* If using actual icon components, you might adjust alignment here */
-    height: 40px; /* Give a fixed height for alignment if icons vary */
+    height: 45px;
     display: flex;
     align-items: center;
-    /* justify-content: center; /* If you want icons centered in their space */
+    justify-content: center;
 }
 
 .serviceTitle {
-    font-size: 1.375rem; /* ~22px */
-    color: var(--color-primary);
+    font-size: 1.5rem;
+    color: var(--color-text-primary); /* Light text */
     font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md); /* More space */
 }
 
 .serviceDescription {
     font-size: 1rem;
     color: var(--color-text-secondary);
-    line-height: 1.6;
-    flex-grow: 1; /* Allows description to fill space if cards have varying content heights */
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+/* Example of a decorative line element */
+.serviceCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: var(--space-lg);
+    width: 3px;
+    height: 0;
+    background-color: var(--color-tertiary-accent); /* Gold line */
+    transition: height 0.3s ease-out;
+}
+
+.serviceCard:hover::before {
+    height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -85,10 +103,10 @@
         padding-bottom: var(--space-xxl);
     }
     .sectionTitle {
-        font-size: 1.75rem;
+        font-size: 1.875rem;
     }
     .introText {
-        font-size: 1rem;
+        font-size: 1.125rem;
         margin-bottom: var(--space-xl);
     }
     .servicesGrid {

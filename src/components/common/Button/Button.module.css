@@ -17,61 +17,63 @@
     text-decoration: none;
 }
 
-/* Accent Variant (like your current CTAs) */
+/* Accent Variant (Gold) - Good for primary CTAs on dark backgrounds */
 .accent {
-    background-color: var(--color-accent);
-    color: var(--color-text-on-accent);
+    background-color: var(--color-tertiary-accent); /* Gold */
+    color: var(--color-text-on-accent); /* Dark text on gold */
     box-shadow: var(--shadow-md);
-    font-size: 1.125rem; /* Matches HeroSection CTA */
-    padding: var(--space-md) var(--space-xl); /* Matches HeroSection CTA */
+    font-size: 1.125rem;
+    padding: var(--space-md) var(--space-xl);
+    border: 1px solid var(--color-tertiary-accent); /* Ensure border matches */
 }
 
 .accent:hover {
-    background-color: var(--color-accent-dark);
+    background-color: var(--color-tertiary-accent-dark);
+    border-color: var(--color-tertiary-accent-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
     color: var(--color-text-on-accent);
 }
 
-/* Larger Accent Variant (like your ContactPromptSection CTA) */
 .accentLarge {
-    composes: accent; /* Inherits from accent */
+    composes: accent;
     font-size: 1.25rem;
     padding: var(--space-md) var(--space-xxl);
 }
 
 .accentLarge:hover {
-    composes: accentLarge; /* Ensure hover styles are also applied */
-    background-color: var(--color-accent-dark);
+    background-color: var(--color-tertiary-accent-dark);
+    border-color: var(--color-tertiary-accent-dark);
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 15px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
 }
 
-
-/* Primary Variant (Example - a more standard button) */
+/* Primary Variant - Could be the Teal accent now */
 .primary {
-    background-color: var(--color-primary);
-    color: var(--color-text-on-primary);
-    border: 1px solid var(--color-primary);
+    background-color: var(--color-secondary-accent); /* Teal */
+    color: var(--color-text-on-secondary-accent); /* White text */
+    border: 1px solid var(--color-secondary-accent);
+    padding: var(--space-sm) var(--space-lg);
 }
 
 .primary:hover {
-    background-color: var(--color-primary-light);
-    border-color: var(--color-primary-light);
-    color: var(--color-text-on-primary);
+    background-color: var(--color-secondary-accent-dark);
+    border-color: var(--color-secondary-accent-dark);
+    color: var(--color-text-on-secondary-accent);
 }
 
-/* Secondary/Outline Variant (Example) */
+/* Secondary/Outline Variant - Outline against dark background */
 .secondary {
     background-color: transparent;
-    color: var(--color-secondary);
-    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary-accent); /* Teal text */
+    border: 2px solid var(--color-secondary-accent); /* Teal border, slightly thicker */
+    padding: calc(var(--space-sm) - 1px) calc(var(--space-lg) - 1px); /* Adjust padding for border */
 }
 
 .secondary:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-text-on-secondary);
-    border-color: var(--color-secondary);
+    background-color: var(--color-secondary-accent);
+    color: var(--color-text-on-secondary-accent); /* White text on hover */
+    border-color: var(--color-secondary-accent);
 }
 
 /* Disabled state */

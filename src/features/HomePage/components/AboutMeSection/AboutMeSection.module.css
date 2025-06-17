@@ -1,52 +1,64 @@
 .aboutSection {
-    background-color: var(--color-surface); /* Or var(--color-background-medium) for subtle contrast */
+    background-color: var(--color-background-medium); /* A slightly different dark shade */
     padding-top: var(--space-xxxl);
     padding-bottom: var(--space-xxxl);
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    /* border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border); */ /* Borders might be too much, use bg contrast */
 }
 
 .contentWrapper {
-    max-width: 900px; /* Control content width for readability */
+    max-width: 900px;
     margin: 0 auto;
     display: grid;
     gap: var(--space-xl);
-    align-items: center;
 }
 
 /* Consider a two-column layout if you add a professional photo or a graphic later */
-/* @media (min-width: 768px) {
-  .contentWrapper {
-    grid-template-columns: 1fr 2fr; // Example: image on left, text on right
-  }
-} */
+@media (min-width: 768px) {
+    .contentWrapper {
+        grid-template-columns: 1fr 2fr; /* This will place the image in the first column and text in the second */
+    }
+}
+
+.imageContainer { /* Added basic styling for the image container */
+    display: flex;
+    justify-content: center; /* Center the image if the column is wider */
+    align-items: center;
+}
+
+.imageContainer img { /* Style for the image itself */
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md); /* Optional: add some rounding to the image */
+    box-shadow: var(--shadow-lg); /* Optional: add a subtle shadow */
+}
 
 .sectionTitle {
-    font-size: var(--font-size-h2); /* Using h2 size from theme.css */
-    color: var(--color-primary);
+    font-size: var(--font-size-h2);
+    color: var(--color-text-primary); /* Light text */
     margin-bottom: var(--space-lg);
-    text-align: center; /* Or left-align if you prefer */
+    text-align: center;
     position: relative;
     padding-bottom: var(--space-sm);
 }
 
-/* Optional: Add a subtle underline accent to the title */
 .sectionTitle::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 70px; /* Slightly longer */
     height: 3px;
-    background-color: var(--color-accent);
+    background-color: var(--color-tertiary-accent); /* Gold accent line */
 }
 
 .textContainer p {
-    font-size: 1.125rem; /* ~18px for better readability */
-    line-height: 1.7;
-    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.8; /* More leading for readability */
+    color: var(--color-text-secondary); /* Light secondary text */
     margin-bottom: var(--space-lg);
+    text-align: justify;
 }
 
 .textContainer p:last-child {
@@ -54,20 +66,21 @@
 }
 
 .highlight {
-    color: var(--color-secondary);
+    color: var(--color-secondary-accent); /* Teal for highlights */
     font-weight: var(--font-weight-semibold);
 }
 
 .expertisePill {
     display: inline-block;
-    background-color: var(--color-primary-light);
-    color: var(--color-text-on-primary);
+    background-color: var(--color-secondary-accent-dark); /* Muted blue */
+    color: var(--color-text-primary-dark-theme);
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--border-radius-lg);
     font-size: 0.9rem;
     font-weight: var(--font-weight-medium);
     margin-right: var(--space-sm);
     margin-bottom: var(--space-sm);
+    border: 1px solid var(--color-border-dark-theme); /* Subtle border */
 }
 
 @media (max-width: 768px) {
@@ -76,9 +89,9 @@
         padding-bottom: var(--space-xxl);
     }
     .sectionTitle {
-        font-size: 1.75rem; /* Adjust for mobile */
+        font-size: 1.875rem;
     }
     .textContainer p {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 }

@@ -14,4 +14,7 @@
     .section {
         padding: var(--space-xl) 0;
     }
+    .sectionTitle {
+        font-size: 1.875rem;
+    }
 }

@@ -9,20 +9,22 @@
 }
 
 html {
-    font-size: 16px; /* Base font size */
+    font-size: 16px;
     scroll-behavior: smooth;
+    background-color: var(--color-background-light); /* Ensures html bg matches body */
 }
 
 body {
     font-family: var(--font-family-sans);
-    background-color: var(--color-background-light);
-    color: var(--color-text-primary);
+    background-color: var(--color-background-light); /* Will now be dark */
+    color: var(--color-text-primary); /* Will now be light text */
     line-height: var(--line-height-base);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scroll from decorative elements */
 }
 
 #root {
@@ -34,28 +36,33 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-heading);
-    color: var(--color-primary);
+    color: var(--color-text-primary); /* Headings will also be light */
     margin-bottom: var(--space-md);
 }
 
-h1 { font-size: 2.5rem; }   /* ~40px */
-h2 { font-size: 2rem; }     /* ~32px */
-h3 { font-size: 1.5rem; }   /* ~24px */
-h4 { font-size: 1.25rem; }  /* ~20px */
+h1, h2 {
+     color: var(--color-secondary);   /* Example: Teal headings */
+}
+
+h1 { font-size: 2.75rem; } /* Slightly adjusted for potentially bolder feel */
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.25rem; }
 
 p {
     margin-bottom: var(--space-md);
+    color: var(--color-text-secondary); /* Secondary text color for paragraphs */
 }
 
 a {
-    color: var(--color-secondary);
+    color: var(--color-secondary); /* Teal links */
     text-decoration: none;
     transition: var(--transition-fast);
 }
 
 a:hover {
-    color: var(--color-accent);
-    text-decoration: underline;
+    color: var(--color-secondary-accent-dark); /* Darker teal on hover */
+    text-decoration: none; /* Often looks cleaner on dark themes */
 }
 
 img, svg {
@@ -72,13 +79,14 @@ img, svg {
     margin-right: auto;
     padding-left: var(--container-padding-x);
     padding-right: var(--container-padding-x);
+    position: relative; /* For absolute positioned decorative elements */
 }
 
 /* Responsive typography adjustments */
 @media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.75rem; }
-    h3 { font-size: 1.375rem; }
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.875rem; }
+    h3 { font-size: 1.5rem; }
 
     :root {
         --container-padding-x: var(--space-md);

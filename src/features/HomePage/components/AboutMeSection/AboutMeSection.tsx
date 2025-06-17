@@ -7,17 +7,15 @@ const YOUR_NAME_OR_COMPANY = "Vincent Corriveau";
 const AboutMeSection: React.FC = () => {
     return (
         <Section id="about" className={styles.aboutSection} aria-labelledby="about-me-title">
-            <div className="container"> {/* This container class is from your global styles */}
+            <h2 id="about-me-title" className={styles.sectionTitle}>
+                Your Partner in FinTech Innovation
+            </h2>
+            <div className="container">
                 <div className={styles.contentWrapper}>
-                    {/* Optional: If you have a professional headshot or relevant graphic
-                      <div className={styles.imageContainer}>
-                        <img src="/path-to-your-image.jpg" alt="Vincent Corriveau" />
-                      </div>
-                      */}
+                    <div className={styles.imageContainer}>
+                        <img src="/src/assets/images/headShot.jpg" alt="Vincent Corriveau"/>
+                    </div>
                     <div className={styles.textContainer}>
-                        <h2 id="about-me-title" className={styles.sectionTitle}>
-                            Your Partner in FinTech Innovation
-                        </h2>
                         <p>
                             <span className={styles.highlight}>{YOUR_NAME_OR_COMPANY}</span>!
                             Is a dedicated FinTech consultant with a <span className={styles.highlight}>robust background</span> in

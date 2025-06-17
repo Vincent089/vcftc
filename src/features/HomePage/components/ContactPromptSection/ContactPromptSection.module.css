@@ -1,28 +1,29 @@
 .contactSection {
-    background-color: var(--color-secondary); /* Using a vibrant color for CTA */
-    color: var(--color-text-on-secondary);
+    background-color: var(--color-secondary-accent); /* Teal */
+    color: var(--color-text-on-secondary-accent); /* White text */
     padding-top: var(--space-xxxl);
     padding-bottom: var(--space-xxxl);
     text-align: center;
 }
 
 .contentWrapper {
-    max-width: 750px; /* Keep content focused */
+    max-width: 750px;
     margin: 0 auto;
 }
 
 .sectionTitle {
     font-size: var(--font-size-h2);
-    color: var(--color-text-on-secondary); /* Ensure contrast with background */
+    color: var(--color-text-on-secondary-accent); /* White text */
     margin-bottom: var(--space-lg);
     font-weight: var(--font-weight-bold);
 }
 
 .promptText {
-    font-size: 1.25rem; /* ~20px */
+    font-size: 1.25rem;
     line-height: 1.7;
     margin-bottom: var(--space-xl);
-    opacity: 0.95; /* Slight transparency for softer look on colored background */
+    opacity: 0.95;
+    color: var(--color-text-on-secondary-accent); /* White text */
 }
 
 .ctaButton {
@@ -54,10 +55,10 @@
         padding-bottom: var(--space-xxl);
     }
     .sectionTitle {
-        font-size: 1.75rem;
+        font-size: 1.875rem;
     }
     .promptText {
-        font-size: 1.125rem;
+        font-size: 1.05rem;
     }
     .ctaButton {
         padding: var(--space-md) var(--space-xl);

@@ -1,9 +1,10 @@
 .footer {
-    background-color: var(--color-primary);
-    color: var(--color-text-on-primary);
+    background-color: var(--color-primary-medium); /* Using a slightly lighter dark for footer */
+    color: var(--color-text-secondary-dark-theme); /* Softer text for footer */
     padding: var(--space-xl) 0 var(--space-lg);
     text-align: center;
-    margin-top: auto; /* Pushes footer to the bottom */
+    margin-top: auto;
+    border-top: 1px solid var(--color-border);
 }
 
 .footerContent {
@@ -12,16 +13,16 @@
 
 .footerContent p {
     margin-bottom: var(--space-xs);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .footerContent a {
-    color: var(--color-accent);
+    color: var(--color-secondary-accent); /* Teal for links */
     font-weight: var(--font-weight-medium);
 }
 
 .footerContent a:hover {
-    color: var(--color-accent-dark);
+    color: var(--color-secondary-accent-dark);
     text-decoration: underline;
 }
 
@@ -33,12 +34,13 @@
 }
 
 .socialLink {
-    color: var(--color-text-on-primary);
-    font-size: 1.5rem; /* Adjust for icon size */
+    color: var(--color-text-primary-dark-theme); /* Brighter icons */
+    font-size: 1.5rem;
     opacity: 0.8;
 }
+
 .socialLink:hover {
     opacity: 1;
-    color: var(--color-accent);
+    color: var(--color-secondary-accent); /* Teal hover for icons */
     text-decoration: none;
 }
