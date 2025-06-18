@@ -1,5 +1,5 @@
 .heroSection {
-    background-image: url('/src/assets/images/heroSection_EN.png'); /* Dark overlay */
+    background-image: url('/src/assets/images/heroSection.png'); /* Dark overlay */
     background-size: cover;
     background-position: center center;
     background-color: var(--color-primary-dark); /* Fallback */

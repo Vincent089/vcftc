@@ -56,7 +56,7 @@ const Header: React.FC = () => {
     return (
         <header className={styles.header}>
             <div className={`container ${styles.headerInner}`}>
-                <Logo showSubtitle/>
+                <Logo/>
                 <button
                     className={styles.mobileMenuButton}
                     onClick={toggleMobileMenu}

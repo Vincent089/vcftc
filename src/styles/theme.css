@@ -1,7 +1,7 @@
 :root {
     /* --- Dark Theme Foundation --- */
     --color-primary-dark: #0D1B2A; /* Very dark, almost black desaturated blue - Main background */
-    --color-primary-medium: #1B263B; /* Slightly lighter dark blue - for surfaces like cards */
+    --color-primary-medium: #0e1c33; /* Slightly lighter dark blue - for surfaces like cards */
     --color-primary-light: #415A77; /* Muted blue for secondary elements or hover states */
 
     --color-secondary-accent: #00A6A6; /* Vibrant Teal - Keep for primary accents, CTAs, highlights */
